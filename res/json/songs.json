@@ -1,0 +1,47 @@
+[
+    {
+        "name":"Forest",
+        "year":2022,
+        "album":"ReTrn Piaon Set",
+        "song":{
+            "url":"/res/forest.mp3",
+            "image":"/res/forest.png"
+        }
+    },
+    {
+        "name":"Ghost",
+        "year":2022,
+        "album":"ReTrn Piaon Set",
+        "song":{
+            "url":"/res/ghost.mp3",
+            "image":"/res/ghost.png"
+        }
+    },
+    {
+        "name":"Truth",
+        "year":2022,
+        "album":"ReTrn Piaon Set",
+        "song":{
+            "url":"/res/truth.mp3",
+            "image":"/res/truth.png"
+        }
+    },
+    {
+        "name":"Unfair",
+        "year":2022,
+        "album":"ReTrn Piaon Set",
+        "song":{
+            "url":"/res/unfair.mp3",
+            "image":"/res/unfair.png"
+        }
+    },
+    {
+        "name":"Deep",
+        "year":2022,
+        "album":"ReTrn Piaon Set",
+        "song":{
+            "url":"/res/deep.mp3",
+            "image":"/res/deep.png"
+        }
+    }
+]

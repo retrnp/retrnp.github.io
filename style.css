@@ -1,0 +1,151 @@
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    font-family: 'times';
+    background-color: rgb(8, 8, 8);
+    color: rgb(241, 241, 241) !important;
+}
+
+body>.top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100vw;
+    height: 50vw;
+    font-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: brightness(0.5);
+    -webkit-backdrop-filter: brightness(0.5);
+}
+
+body>.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(rtps.webp);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100vw;
+    height: 50vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pf {
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 15px;
+    background-color: rgb(241, 241, 241);
+    color: rgb(8, 8, 8);
+    width: 180px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.pf>*{
+    margin: 5px;
+}
+
+.pf>img{
+    width: 50px;
+}
+
+.space {
+    height: 50vw;
+}
+
+.al {
+    margin: 25px;
+    padding: 25px;
+    overflow-x: scroll;
+}
+
+.al>.song>img {
+    max-width: 250px;
+    max-height: 250px;
+    width: 80vw;
+    height: 80vw;
+}
+
+.song {
+    display: flex;
+    flex-flow: row;
+    margin: 25px;
+}
+
+.song>.info {
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.song>.info>*{
+    margin: 5px;
+    color: rgb(241, 241, 241);
+    font-size: 25px;
+}
+
+.songtitle {
+    font-size: 55px !important;
+}
+
+#if {
+    opacity: 0.8;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    outline: none;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    max-height: 360px;
+    max-width: 640px;
+    height: 100vw;
+    width: 100vw;
+    min-height: 90px;
+    min-width: 160px;
+    display: none;
+}
+
+.player {
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    height: 100%;
+    width: 100%;
+}
+
+#close {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    padding: 15px;
+    cursor: pointer;
+    user-select: none;
+    
+}
+
+.al>p {
+    padding: 10%;
+    font-size: 25px;
+}
+
+.outof {
+    text-decoration: none;
+}
