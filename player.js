@@ -32,6 +32,7 @@ const getSong = s => {
                 document.getElementById("end").addEventListener("click",()=>{
                     return a.currentTime+=10;
                 });
+                document.getElementById("ne").href = "https://music.163.com/#/song?id=" + w.netease;
                 setInterval(()=>{
                     let c = document.getElementById("current");
                     let t = a.currentTime;

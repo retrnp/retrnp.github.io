@@ -98,3 +98,32 @@ button {
     border: 2px solid orange;
     border-radius: 50%;
 }
+
+.pf {
+    padding: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    color: black;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.platforms {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+.platforms:hover {
+    opacity: 1;
+}
+
+a {
+    text-decoration: none;
+}
