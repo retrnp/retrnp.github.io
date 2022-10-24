@@ -33,6 +33,8 @@ const getSong = s => {
                     return a.currentTime+=10;
                 });
                 document.getElementById("ne").href = "https://music.163.com/#/song?id=" + w.netease;
+                if(w.netease=="N") document.getElementById("ne").remove();
+                if(w.full) document.getElementById("previewonly").innerText = "Free for everyone!";
                 setInterval(()=>{
                     let c = document.getElementById("current");
                     let t = a.currentTime;

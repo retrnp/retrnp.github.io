@@ -4,6 +4,11 @@ for(let i=0;i<a.length;i++){
         a.item(i).target = "player";
         a.item(i).addEventListener("click",()=>{
             document.getElementById("if").style.display = 'block';
-        })
+        });
     }
 }
+
+document.getElementById("player").addEventListener("load",()=>{
+    console.log(a);
+    document.getElementById("player").contentWindow.document.getElementById("toolbar").remove();
+});

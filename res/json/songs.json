@@ -6,7 +6,8 @@
         "song":{
             "url":"/res/forest.mp3",
             "image":"/res/forest.png"
-        }
+        },
+        "netease":"1990393860"
     },
     {
         "name":"Ghost",
@@ -15,7 +16,8 @@
         "song":{
             "url":"/res/ghost.mp3",
             "image":"/res/ghost.png"
-        }
+        },
+        "netease":"1990393016"
     },
     {
         "name":"Truth",
@@ -24,7 +26,8 @@
         "song":{
             "url":"/res/truth.mp3",
             "image":"/res/truth.png"
-        }
+        },
+        "netease":"1990393861"
     },
     {
         "name":"Unfair",
@@ -33,7 +36,8 @@
         "song":{
             "url":"/res/unfair.mp3",
             "image":"/res/unfair.png"
-        }
+        },
+        "netease":"1990393862"
     },
     {
         "name":"Deep",
@@ -42,6 +46,18 @@
         "song":{
             "url":"/res/deep.mp3",
             "image":"/res/deep.png"
-        }
+        },
+        "netease":"1990745218"
+    },
+    {
+        "name":"Birthday",
+        "year":2022,
+        "album":"Birthday Set",
+        "song":{
+            "url":"/res/birthday.mp3",
+            "image":"/res/birthday.png"
+        },
+        "netease":"N",
+        "full":true
     }
 ]
