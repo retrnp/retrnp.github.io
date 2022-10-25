@@ -153,3 +153,11 @@ body>.background {
 .sheet {
     text-decoration: underline;
 }
+
+.kaiti {
+    font-family: "kaiti";
+}
+
+.pf>img {
+    border-radius: 6px;
+}
