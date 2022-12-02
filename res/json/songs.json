@@ -59,5 +59,15 @@
         },
         "netease":"N",
         "full":true
+    },
+    {
+        "name":"New%20World",
+        "year":2022,
+        "album":"ReTrn Piaon Set",
+        "song":{
+            "url":"/res/newworld.mp3",
+            "image":"newworld.png"
+        },
+        "netease":"2002102805"
     }
 ]

@@ -5,7 +5,7 @@ const getSong = s => {
         data.forEach(w=>{
             if(w.name.toLowerCase()==s){
                 document.getElementById("pic").src = w.song.image;
-                document.getElementById("title").innerText = w.name;
+                document.getElementById("title").innerText = decodeURIComponent(w.name);
                 document.getElementById("year").innerText = w.year;
                 document.getElementById("set").innerText = w.album;
                 let a = document.createElement("audio");

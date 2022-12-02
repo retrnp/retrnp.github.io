@@ -4,7 +4,8 @@
 
 body {
     font-family: 'times';
-    background-color: rgb(8, 8, 8);
+    background-image: url(cristofer-maximilian-uQDRDqpYJHI-unsplash.jpg);
+    background-size: cover;
     color: rgb(241, 241, 241) !important;
 }
 
@@ -21,15 +22,17 @@ body>.top {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    backdrop-filter: brightness(0.5);
-    -webkit-backdrop-filter: brightness(0.5);
+}
+
+img, a {
+    -webkit-user-drag: none;
+    user-select: none;
 }
 
 body>.background {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(rtps.webp);
     justify-content: center;
     align-items: center;
     display: flex;
@@ -45,10 +48,13 @@ body>.background {
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 15px;
-    background-color: rgb(241, 241, 241);
-    color: rgb(8, 8, 8);
+    background-color: rgba(39, 39, 39, 0.5);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    transition: backdrop-filter .5s, -webkit-backdrop-filter .5s;
+    color: rgb(255, 255, 255);
     width: 180px;
-    border-radius: 15px;
+    border-radius: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -56,6 +62,11 @@ body>.background {
     font-size: 25px;
     user-select: none;
     cursor: pointer;
+}
+
+.pf:hover {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .pf>*{
@@ -74,6 +85,8 @@ body>.background {
     margin: 25px;
     padding: 25px;
     overflow-x: scroll;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .al>.song>img {
@@ -87,6 +100,8 @@ body>.background {
     display: flex;
     flex-flow: row;
     margin: 25px;
+    width: 45%;
+    overflow: hidden;
 }
 
 .song>.info {
@@ -160,4 +175,11 @@ body>.background {
 
 .pf>img {
     border-radius: 6px;
+}
+
+.platforms {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center ;
 }
