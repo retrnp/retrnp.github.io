@@ -1,0 +1,343 @@
+@font-face {
+    font-family: 'Times';
+    src: url(./fonts/TIMES.TTF);
+}
+
+* {
+    font-family: 'Times';
+    user-select: none;
+    font-weight: lighter;
+}
+
+*::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.fullscreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: radial-gradient(79.44% 79.44% at 50% 50%, #1E1E1E 0%, #000 100%);
+    animation: fade 2s ease-in-out;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.content.center {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fullscreen h1 {
+    font-weight: lighter;
+    font-size: 5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.lane {
+    background-color: rgba(173, 216, 230, 0.1);
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: center;
+    animation: start 3s cubic-bezier(0.58, 0, 0, 1.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.lane>font {
+    font-size: 1.3rem;
+    color: #fff;
+    margin: 0 10px;
+    background-color: rgba(178, 228, 245, 0.132);
+    border: 3px solid rgba(165, 180, 254, 0.398);
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.lane>font:hover {
+    background-color: rgba(178, 228, 245, 0.2);
+    border: 3px solid rgba(165, 180, 254, 0.6);
+}
+
+.scroll-to-start-tip {
+    color: #ffffff21;
+    margin: 0;
+}
+
+@keyframes start {
+    0% {
+        width: 0%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    50% {
+        width: 0%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    100% {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+}
+
+#main-container {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    transition: 2s;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+@keyframes raise-in {
+    0% {
+        transform: translate(0, 100%);
+    }
+
+    20% {
+        transform: translate(0, 100%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.album {
+    margin: 45px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 0 0;
+    transition: padding 0.2s ease-in-out, margin 0.2s ease-in-out, background-color .6s ease-in-out, margin-bottom .2s;
+    background-color: rgba(245, 245, 245, 0.658);
+    cursor: pointer;
+    border-radius: 2px;
+    position: relative;
+}
+
+.album:hover {
+    padding: 30px 7px 0 7px;
+    margin: 0px 13px;
+    margin-bottom: 0px;
+    background-color: rgba(245, 245, 245, 0.804);
+}
+
+.album>img {
+    max-width: 300px;
+    max-height: 300px;
+    width: 30vh;
+    height: 30vh;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.album>img[alt="icon"] {
+    position: absolute;
+    top: 30px;
+    box-shadow: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    mix-blend-mode: soft-light;
+}
+
+.album h1 {
+    font-size: 1.5rem;
+    margin: 10px;
+    color: #000;
+    text-align: center;
+}
+
+.album .toolbar {
+    height: 0;
+    overflow: hidden;
+    transition: height .2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.album:hover .toolbar {
+    height: 55px;
+}
+
+.btn-toggle>img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 2px;
+    background-color: #ffffff5a;
+}
+
+.toolbar>a {
+    text-decoration: dotted underline;
+    color: #000;
+    font-size: .8rem;
+    margin: 0;
+
+}
+
+.toolbar>button {
+    color: #fff;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.132);
+    border: 3px solid rgba(165, 180, 254, 0.398);
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.placeholder1vh {
+    height: 101vh;
+}
+
+.text {
+    width: 100%;
+    padding: 10%;
+    background: radial-gradient(50% 50% at 50% 50%, #000 0%, rgba(0, 0, 0, 0.51) 0.01%, rgba(48, 48, 48, 0.00) 100%);
+}
+
+.words {
+    margin: 20px;
+    color: rgb(255, 255, 255);
+    --fontsize: calc(25/192);
+    font-size: max(calc(100vw / 1.2 / 4.8 * var(--fontsize)), calc(100vh / 0.9 / 4.8 * var(--fontsize)));
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+@font-face {
+    font-family: 'Noto Sans TC Light', sans-serif;
+    src: url(./assets/NotoSansTC-Light.otf);
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+    color: white;
+    font-weight: lighter;
+    font-family: 'Noto Sans TC Light';
+    font-size: 1.2rem;
+}
+
+.footer * {
+    font-family: 'Noto Sans TC Light';
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.footer a {
+    font-weight: bold;
+    color: #8aaac8;
+    text-decoration: dotted underline;
+    font-family: 'Noto Sans TC Light';
+}
+
+.platforms {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+p,
+.selection {
+    user-select: text;
+}
+
+.platforms>a,
+span.platform {
+    display: block;
+    --height: 60px;
+    height: var(--height);
+    margin-top: calc(var(--height) / 3);
+    margin-bottom: calc(var(--height) / 3);
+    width: calc(var(--height) * 4);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    border-radius: 10px;
+}
+
+span.platform[platform="apple"] {
+    background-image: url(./icons/applemusic.svg);
+}
+
+span.platform[platform="spotify"] {
+    background-image: url(./icons/spotify.svg);
+}
+
+span.platform[platform="youtube"] {
+    background-image: url(./icons/youtube.svg);
+}
+
+span.platform[platform="amazon"] {
+    background-image: url(./icons/amazon.svg);
+}
+
+span.br {
+    height: 1px;
+    width: 100%;
+}
