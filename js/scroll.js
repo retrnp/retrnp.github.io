@@ -31,10 +31,10 @@ function resize() {
         .btn-toggle>img{width: 35px; height: 35px;}
         `;
     } else {
-        style.innerHTML = `.album:hover .toolbar{height: 75px;}
+        style.innerHTML = `.album:hover .toolbar{height: 55px;}
         .toolbar a{font-size: .8rem;}
-        .album h1{font-size: 1.5rem;}
-        .btn-toggle>img{width: 30px; height: 30px;}
+        .album h1{font-size: 1.6rem;}
+        .btn-toggle>img{width: 25px; height: 25px;}
         `;
     }
 }
