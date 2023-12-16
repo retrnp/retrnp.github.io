@@ -34,7 +34,7 @@ function resize() {
         style.innerHTML = `.album:hover .toolbar{height: 75px;}
         .toolbar a{font-size: .8rem;}
         .album h1{font-size: 1.5rem;}
-        .btn-toggle>img{width: 20px; height: 20px;}
+        .btn-toggle>img{width: 30px; height: 30px;}
         `;
     }
 }

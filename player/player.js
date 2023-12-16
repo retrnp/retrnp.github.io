@@ -12,7 +12,7 @@ function getAlbumName() {
     return decodeURI(query[1].split('=')[1]);
 }
 
-var albumArt = '/img/' + getAlbumName() + '.jpg';
+var albumArt = '/img/' + getAlbumName().replaceAll(' ', '-').toLowerCase() + '.jpg';
 var albumArtElement = document.getElementById('albumArt');
 albumArtElement.src = albumArt;
 document.body.style.backgroundImage = `url(${encodeURI(albumArt)})`;
@@ -30,4 +30,4 @@ var year = document.getElementById('year');
 year.innerHTML = '';
 // Change audio source
 var audio = document.getElementById('audio');
-audio.src = '/sounds/' + getSongName() + '.mp3';
+audio.src = '/sounds/' + getSongName().replaceAll(' ', '-').toLowerCase() + '.mp3';

@@ -2,18 +2,18 @@
 const main_container = this.document.getElementById('main-container');
 
 var songs = ['My Own World', 'Repic', 'the Song for Eve', 'You', 'New World', 'Deep', 'Ruin', 'The Love Story', 'Unknown (2024)'];
-var albums = ['With Them', 'With Them', 'With Them', 'With Them', 'ReTrn Piano Set - New World', 'The Love Story', 'The Love Story', 'The Love Story', 'Unknown']
+var albums = ['With Them', 'With Them', 'With Them', 'With Them', 'ReTrn Piano Set', 'The Love Story', 'The Love Story', 'The Love Story', 'Unknown']
 
 for (var i = 0; i < songs.length; i++) {
     var album = document.createElement('span');
     album.classList.add('album');
     // create children
     album.innerHTML = `
-    <img src="./img/${albums[i]}.jpg" alt="">
+    <img src="./img/${albums[i].replaceAll(' ', '-').toLowerCase()}.jpg" alt="">
     <img src="./icons/music_note.svg" alt="icon">
     <h1>${songs[i]}</h1>
     <div class="toolbar">
-        <audio src="./sounds/${songs[i]}.mp3" class="previews"></audio>
+        <audio src="./sounds/${songs[i].replaceAll(' ', '-').toLowerCase()}.mp3" class="previews"></audio>
         <div class="btn-toggle" data-can-play="true"><img src="./icons/play.svg" alt=""></div>
         <a data-song="${songs[i]}" href="./player/player.html?song=${songs[i]}&cover=${albums[i]}">Listen Full</a>
     </div>
